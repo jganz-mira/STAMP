@@ -18,6 +18,7 @@ class ExtractorName(StrEnum):
     UNI = "uni"
     UNI2 = "uni2"
     DINO_BLOOM = "dino-bloom"
+    OPENMIDNIGHT = "openmidnight"
     GIGAPATH = "gigapath"
     H_OPTIMUS_0 = "h-optimus-0"
     H_OPTIMUS_1 = "h-optimus-1"
@@ -31,6 +32,10 @@ class ExtractorName(StrEnum):
     TICON = "ticon"
     EMPTY = "empty"
     RED_DINO = "red-dino"
+    MIRA_SEG = "mira_seg"
+    MIRA_IMAGENET = "mira_imagenet"
+    VICREG = "vicreg"
+    MIRA_AUTOENCODER = "mira_autoencoder"
 
 
 class PreprocessingConfig(BaseModel, arbitrary_types_allowed=True):
@@ -46,6 +51,19 @@ class PreprocessingConfig(BaseModel, arbitrary_types_allowed=True):
     tile_size_um: Microns = Microns(256.0)
     tile_size_px: TilePixels = TilePixels(224)
     extractor: ExtractorName
+    mira_seg_checkpoint_path: Path | None = None
+    """Checkpoint used by the ``mira_seg`` extractor.
+
+    If omitted, ``checkpoint/last.ckpt`` relative to the working directory is used.
+    """
+    vicreg_checkpoint_path: Path | None = None
+    """Checkpoint used by the ``vicreg`` feature extractor."""
+    vicreg_batch_size: int | None = Field(default=None, gt=0)
+    """Optional inference batch-size override for the ``vicreg`` extractor."""
+    mira_autoencoder_checkpoint_path: Path | None = None
+    """Checkpoint used by the ``mira_autoencoder`` feature extractor."""
+    mira_autoencoder_batch_size: int | None = Field(default=None, gt=0)
+    """Optional inference batch-size override for ``mira_autoencoder``."""
     max_workers: int = 8
     device: str = Field(
         default_factory=lambda: (

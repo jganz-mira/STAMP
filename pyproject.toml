@@ -141,6 +141,10 @@ plip_cpu = [
 plip = [
     "stamp[plip_cpu]",
 ]
+mira_seg = [
+    "omegaconf==2.3.0",
+    "segmentation-models-pytorch==0.5.0",
+]
 mcp = [
     "fastmcp==3.4.7",
 ]
@@ -150,17 +154,17 @@ mcp = [
 cpu = [
     "torch==2.11.0",
     "torchvision==0.26.0",
-    "stamp[conch,ctranspath,uni,virchow2,chief_ctranspath,conch1_5_cpu,prism_cpu,madeleine,musk_cpu,plip_cpu]"
+    "stamp[conch,ctranspath,uni,virchow2,chief_ctranspath,conch1_5_cpu,prism_cpu,madeleine,musk_cpu,plip_cpu,mira_seg]"
 ]
 gpu = [
     "torch==2.11.0",
     "torchvision==0.26.0",
-    "stamp[conch,ctranspath,uni,virchow2,chief_ctranspath,conch1_5_cpu,prism,madeleine,plip,musk_cpu,cobra]"
+    "stamp[conch,ctranspath,uni,virchow2,chief_ctranspath,conch1_5_cpu,prism,madeleine,plip,musk_cpu,cobra,mira_seg]"
 ]
 gpu_all = [
     "torch==2.11.0",
     "torchvision==0.26.0",
-    "stamp[conch,ctranspath,uni,virchow2,chief_ctranspath,musk,gigapath,conch1_5,prism,madeleine,plip,cobra]"
+    "stamp[conch,ctranspath,uni,virchow2,chief_ctranspath,musk,gigapath,conch1_5,prism,madeleine,plip,cobra,mira_seg]"
 ]
 # Deprecated alias of gpu_all, kept for one release. Removed in the next
 # breaking release.

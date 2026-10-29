@@ -138,7 +138,14 @@ class Base(lightning.LightningModule, ABC):
             max_lr=self.max_lr,
             div_factor=self.div_factor,
         )
-        return [optimizer], [scheduler]
+        return {
+            "optimizer": optimizer,
+            "lr_scheduler": {
+                "scheduler": scheduler,
+                "interval": "step",
+                "frequency": 1,
+            },
+        }
 
     def on_train_batch_end(self, outputs, batch, batch_idx):
         current_lr = self.trainer.optimizers[0].param_groups[0]["lr"]

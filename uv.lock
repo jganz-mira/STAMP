@@ -3,23 +3,23 @@ revision = 3
 requires-python = ">=3.13, <3.15"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'win32' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
-    "python_full_version < '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'win32' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra == 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
 ]
@@ -173,6 +173,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/5f/56/a8120250d128bed16
 wheels = [
     { url = "https://files.pythonhosted.org/packages/99/91/8acff4f5e50511b911bbccb72b8628a49c68ce14148cd9f6431094859a90/annotated_types-0.8.0-py3-none-any.whl", hash = "sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0", size = 13427, upload-time = "2026-07-23T20:16:12.938Z" },
 ]
+
+[[package]]
+name = "antlr4-python3-runtime"
+version = "4.9.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3e/38/7859ff46355f76f8d19459005ca000b6e7012f2f1ca597746cbcd1fbfe5e/antlr4-python3-runtime-4.9.3.tar.gz", hash = "sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b", size = 117034, upload-time = "2021-11-06T17:52:23.524Z" }
 
 [[package]]
 name = "anyio"
@@ -991,10 +997,10 @@ dependencies = [
     { name = "torch", version = "2.11.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" }, marker = "(sys_platform != 'darwin' and sys_platform != 'win32' and extra == 'extra-5-stamp-gpu') or (sys_platform == 'linux' and extra != 'extra-5-stamp-cpu') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (sys_platform == 'win32' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (sys_platform == 'win32' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
 ]
 wheels = [
-    { url = "https://wheels.astral.sh/artifacts/22a404742ffe9cf3cbbc8c1364ef4f89c90c96e64d5d1f73b961426acf863110/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_aarch64.whl", hash = "sha256:22a404742ffe9cf3cbbc8c1364ef4f89c90c96e64d5d1f73b961426acf863110", size = 242283841, upload-time = "2026-06-23T18:01:25Z" },
-    { url = "https://wheels.astral.sh/artifacts/164141a4e31648d72746624599c220e847fc8781fc2752c099d0e15b5dd2a7a3/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_x86_64.whl", hash = "sha256:164141a4e31648d72746624599c220e847fc8781fc2752c099d0e15b5dd2a7a3", size = 242459604, upload-time = "2026-06-23T18:01:26Z" },
-    { url = "https://wheels.astral.sh/artifacts/63190d23f04bf18d8d19cc3f134ef4207da817342316cc455c07bd2de62817e4/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_aarch64.whl", hash = "sha256:63190d23f04bf18d8d19cc3f134ef4207da817342316cc455c07bd2de62817e4", size = 242284349, upload-time = "2026-06-23T18:01:27Z" },
-    { url = "https://wheels.astral.sh/artifacts/bff367094d978ca605216b2eb307c3fc8b32b54053c79fe4b712b07f847d2c16/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_x86_64.whl", hash = "sha256:bff367094d978ca605216b2eb307c3fc8b32b54053c79fe4b712b07f847d2c16", size = 242458647, upload-time = "2026-06-23T18:01:27Z" },
+    { url = "https://wheels.astral.sh/artifacts/949b8b62e7ef8f46c7e9704203c8445d69d57f0bd0ed0f2a29fc710822cd2b3d/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_aarch64.whl", hash = "sha256:949b8b62e7ef8f46c7e9704203c8445d69d57f0bd0ed0f2a29fc710822cd2b3d", size = 242283878, upload-time = "2026-10-03T18:51:36Z" },
+    { url = "https://wheels.astral.sh/artifacts/7b5fe4f50162693d21d67c5d0436513fe0421ab298de464b1be55b16b056d2ee/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_x86_64.whl", hash = "sha256:7b5fe4f50162693d21d67c5d0436513fe0421ab298de464b1be55b16b056d2ee", size = 242459626, upload-time = "2026-10-03T18:51:38Z" },
+    { url = "https://wheels.astral.sh/artifacts/cd7180bffd1aa45f89b7d380e3d15e679f805ca2190ea80a91d77d9871a6a137/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_aarch64.whl", hash = "sha256:cd7180bffd1aa45f89b7d380e3d15e679f805ca2190ea80a91d77d9871a6a137", size = 242284261, upload-time = "2026-10-03T18:51:38Z" },
+    { url = "https://wheels.astral.sh/artifacts/5471eb0ff03a412cff402c9d620e23080227e4294dcea935c8b6d4fe3f3c7215/flash_attn-2.8.3.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_x86_64.whl", hash = "sha256:5471eb0ff03a412cff402c9d620e23080227e4294dcea935c8b6d4fe3f3c7215", size = 242458597, upload-time = "2026-10-03T18:51:39Z" },
 ]
 
 [[package]]
@@ -1834,10 +1840,10 @@ dependencies = [
     { name = "triton", marker = "sys_platform == 'linux' or (sys_platform != 'darwin' and sys_platform != 'win32' and extra == 'extra-5-stamp-cpu') or (sys_platform != 'darwin' and sys_platform != 'win32' and extra == 'extra-5-stamp-gpu') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (sys_platform == 'darwin' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (sys_platform == 'win32' and extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (sys_platform == 'win32' and extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (sys_platform == 'win32' and extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (sys_platform == 'win32' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (sys_platform == 'win32' and extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
 ]
 wheels = [
-    { url = "https://wheels.astral.sh/artifacts/efc433c903a430dc3d3dcf7098f876f1900e22a26b77bd53202b0651508b197c/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:efc433c903a430dc3d3dcf7098f876f1900e22a26b77bd53202b0651508b197c", size = 349295777, upload-time = "2026-06-17T15:08:34Z" },
-    { url = "https://wheels.astral.sh/artifacts/f567c57fe4e51b109805b71292db04584899e76dbfe22c0582fef1785b14787f/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:f567c57fe4e51b109805b71292db04584899e76dbfe22c0582fef1785b14787f", size = 349373688, upload-time = "2026-06-17T15:09:03Z" },
-    { url = "https://wheels.astral.sh/artifacts/c63289d33befc9b300607ffeee1f3cd5fefaacc3f3bcb93f33aeb2b1df6bdfa3/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c63289d33befc9b300607ffeee1f3cd5fefaacc3f3bcb93f33aeb2b1df6bdfa3", size = 349296442, upload-time = "2026-06-17T15:18:39Z" },
-    { url = "https://wheels.astral.sh/artifacts/f5a55d172e2b326e75053d0ec039ddcf4b0b04d87f9b73c14936fb8af97fabe7/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:f5a55d172e2b326e75053d0ec039ddcf4b0b04d87f9b73c14936fb8af97fabe7", size = 349373386, upload-time = "2026-06-17T15:09:02Z" },
+    { url = "https://wheels.astral.sh/artifacts/fa11065afcba9065f8e3cb6bda4ed9e15b8a8d840309a4f7a070b000412fb18b/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:fa11065afcba9065f8e3cb6bda4ed9e15b8a8d840309a4f7a070b000412fb18b", size = 349292046, upload-time = "2026-10-03T18:09:47Z" },
+    { url = "https://wheels.astral.sh/artifacts/36974d8534a5b7eb393c5d0654d325228644a951f12aa5459263e9962b24a980/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:36974d8534a5b7eb393c5d0654d325228644a951f12aa5459263e9962b24a980", size = 349369926, upload-time = "2026-10-03T18:09:47Z" },
+    { url = "https://wheels.astral.sh/artifacts/9792985603ebb1f309ba6a396d6ee063cfe01b9c3b773fc99132169919b74a4b/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:9792985603ebb1f309ba6a396d6ee063cfe01b9c3b773fc99132169919b74a4b", size = 349292143, upload-time = "2026-10-03T18:09:48Z" },
+    { url = "https://wheels.astral.sh/artifacts/5f3c5726b14f5fd8d35390951e582f8bda687f122c140be3945e852135c49bc5/mamba_ssm-2.3.2.post1+cu.13.0.torch.2.11-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5f3c5726b14f5fd8d35390951e582f8bda687f122c140be3945e852135c49bc5", size = 349369824, upload-time = "2026-10-03T18:09:48Z" },
 ]
 
 [[package]]
@@ -2539,6 +2545,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/c2/f3/d86c845465a2723ad7e1e5c36dcd75ddb82898b3f53be47ebd429fb2fa5d/nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:4936d1d6780fbe68db454f5e72a42ff64d1fd6397df9f363ae786930fd5c1cd4", size = 148047, upload-time = "2025-09-04T08:29:01.761Z" },
     { url = "https://files.pythonhosted.org/packages/a8/64/3708a90d1ebe202ffdeb7185f878a3c84d15c2b2c31858da2ce0583e2def/nvidia_nvtx-13.0.85-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:cb7780edb6b14107373c835bf8b72e7a178bac7367e23da7acb108f973f157a6", size = 148878, upload-time = "2025-09-04T08:28:53.627Z" },
     { url = "https://files.pythonhosted.org/packages/d2/50/0e2220f8620a177de994211186ffc5bfa9f2ce1e1282797f8f90096f9f88/nvidia_nvtx-13.0.85-py3-none-win_amd64.whl", hash = "sha256:d66ea44254dd3c6eacc300047af6e1288d2269dd072b417e0adffbf479e18519", size = 137066, upload-time = "2025-09-04T08:39:25.649Z" },
+]
+
+[[package]]
+name = "omegaconf"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "antlr4-python3-runtime" },
+    { name = "pyyaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/09/48/6388f1bb9da707110532cb70ec4d2822858ddfb44f1cdf1233c20a80ea4b/omegaconf-2.3.0.tar.gz", hash = "sha256:d5d4b6d29955cc50ad50c46dc269bcd92c6e00f5f90d23ab5fee7bfca4ba4cc7", size = 3298120, upload-time = "2022-12-08T20:59:22.753Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e3/94/1843518e420fa3ed6919835845df698c7e27e183cb997394e4a670973a65/omegaconf-2.3.0-py3-none-any.whl", hash = "sha256:7b4df175cdb08ba400f45cae3bdcae7ba8365db4d165fc65fd04b050ab63b46b", size = 79500, upload-time = "2022-12-08T20:59:19.686Z" },
 ]
 
 [[package]]
@@ -3832,6 +3851,29 @@ wheels = [
 ]
 
 [[package]]
+name = "segmentation-models-pytorch"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "numpy" },
+    { name = "pillow" },
+    { name = "safetensors" },
+    { name = "timm" },
+    { name = "torch", version = "2.11.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
+    { name = "torch", version = "2.11.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform != 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
+    { name = "torch", version = "2.11.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" }, marker = "extra == 'extra-5-stamp-gpu' or extra == 'extra-5-stamp-gpu-all' or extra == 'extra-5-stamp-gpu-prebuilt' or extra != 'extra-5-stamp-cpu'" },
+    { name = "torchvision", version = "0.26.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
+    { name = "torchvision", version = "0.26.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform != 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
+    { name = "torchvision", version = "0.26.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" }, marker = "extra == 'extra-5-stamp-gpu' or extra == 'extra-5-stamp-gpu-all' or extra == 'extra-5-stamp-gpu-prebuilt' or extra != 'extra-5-stamp-cpu'" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/15/fa/d5a29d49240fb10bdead608b4d0c6805684a8f63b1f65863502be65b1ca4/segmentation_models_pytorch-0.5.0.tar.gz", hash = "sha256:cabba8aced6ef7bdcd6288dd9e1dc2840848aa819d539c455bd07aeceb2fdf96", size = 105150, upload-time = "2025-04-17T10:43:45.755Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ef/62/a50e5ac6191a498ad631e54df13d7e2d7eeb1325b15ee9ea1ee3ec065aaa/segmentation_models_pytorch-0.5.0-py3-none-any.whl", hash = "sha256:c34e09047771aa4dd8878b4f899e8125700cd1f8f7db16e58c37204154151a05", size = 154789, upload-time = "2025-04-17T10:43:43.668Z" },
+]
+
+[[package]]
 name = "sentry-sdk"
 version = "2.67.1"
 source = { registry = "https://pypi.org/simple" }
@@ -3982,7 +4024,9 @@ all = [
     { name = "huggingface-hub", marker = "extra == 'extra-5-stamp-cpu' or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "madeleine", marker = "extra == 'extra-5-stamp-cpu' or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "musk", marker = "extra == 'extra-5-stamp-cpu' or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
+    { name = "omegaconf", marker = "extra == 'extra-5-stamp-cpu' or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "sacremoses", marker = "extra == 'extra-5-stamp-cpu' or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
+    { name = "segmentation-models-pytorch", marker = "extra == 'extra-5-stamp-cpu' or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "torch", version = "2.11.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "torch", version = "2.11.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform != 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "torch", version = "2.11.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" }, marker = "extra == 'extra-5-stamp-gpu' or extra == 'extra-5-stamp-gpu-all' or extra == 'extra-5-stamp-gpu-prebuilt' or extra != 'extra-5-stamp-cpu'" },
@@ -4031,7 +4075,9 @@ cpu = [
     { name = "huggingface-hub" },
     { name = "madeleine" },
     { name = "musk" },
+    { name = "omegaconf" },
     { name = "sacremoses" },
+    { name = "segmentation-models-pytorch" },
     { name = "torch", version = "2.11.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "torch", version = "2.11.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform != 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
     { name = "torchvision", version = "0.26.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(sys_platform == 'darwin' and extra == 'extra-5-stamp-cpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu-prebuilt') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-all') or (extra == 'extra-5-stamp-gpu' and extra == 'extra-5-stamp-gpu-prebuilt')" },
@@ -4070,7 +4116,9 @@ gpu = [
     { name = "madeleine" },
     { name = "mamba-ssm", marker = "sys_platform == 'linux'" },
     { name = "musk" },
+    { name = "omegaconf" },
     { name = "sacremoses" },
+    { name = "segmentation-models-pytorch" },
     { name = "torch", version = "2.11.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" } },
     { name = "torchvision", version = "0.26.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" } },
     { name = "transformers" },
@@ -4095,9 +4143,11 @@ gpu-all = [
     { name = "mamba-ssm", marker = "sys_platform == 'linux'" },
     { name = "monai", marker = "sys_platform == 'linux'" },
     { name = "musk" },
+    { name = "omegaconf" },
     { name = "sacremoses" },
     { name = "scikit-image", marker = "sys_platform == 'linux'" },
     { name = "scikit-survival", marker = "sys_platform == 'linux'" },
+    { name = "segmentation-models-pytorch" },
     { name = "torch", version = "2.11.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" } },
     { name = "torchvision", version = "0.26.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" } },
     { name = "transformers" },
@@ -4125,9 +4175,11 @@ gpu-prebuilt = [
     { name = "mamba-ssm", marker = "sys_platform == 'linux'" },
     { name = "monai", marker = "sys_platform == 'linux'" },
     { name = "musk" },
+    { name = "omegaconf" },
     { name = "sacremoses" },
     { name = "scikit-image", marker = "sys_platform == 'linux'" },
     { name = "scikit-survival", marker = "sys_platform == 'linux'" },
+    { name = "segmentation-models-pytorch" },
     { name = "torch", version = "2.11.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" } },
     { name = "torchvision", version = "0.26.0+cu130", source = { registry = "https://download.pytorch.org/whl/cu130" } },
     { name = "transformers" },
@@ -4142,6 +4194,10 @@ madeleine = [
 ]
 mcp = [
     { name = "fastmcp" },
+]
+mira-seg = [
+    { name = "omegaconf" },
+    { name = "segmentation-models-pytorch" },
 ]
 musk = [
     { name = "fairscale" },
@@ -4221,6 +4277,7 @@ requires-dist = [
     { name = "musk", marker = "extra == 'musk-cpu'", git = "https://github.com/lilab-stanford/MUSK.git?rev=e1699c27687f44bbf6d4adfcbb2abe89795d347f" },
     { name = "ninja", marker = "extra == 'build'", specifier = "==1.11.1.1" },
     { name = "numpy", specifier = "==2.4.6" },
+    { name = "omegaconf", marker = "extra == 'mira-seg'", specifier = "==2.3.0" },
     { name = "opencv-python", specifier = "==5.0.0.93" },
     { name = "openpyxl", specifier = "==3.1.5" },
     { name = "openslide-bin", specifier = "==4.0.1.2" },
@@ -4236,10 +4293,11 @@ requires-dist = [
     { name = "scikit-learn", specifier = "==1.9.0" },
     { name = "scikit-survival", marker = "sys_platform == 'linux' and extra == 'gigapath'", specifier = "==0.28.0" },
     { name = "scipy", specifier = "==1.18.0" },
+    { name = "segmentation-models-pytorch", marker = "extra == 'mira-seg'", specifier = "==0.5.0" },
     { name = "setuptools", marker = "extra == 'build'", specifier = "==81.0.0" },
-    { name = "stamp", extras = ["conch", "ctranspath", "uni", "virchow2", "chief-ctranspath", "conch1-5-cpu", "prism", "madeleine", "plip", "musk-cpu", "cobra"], marker = "extra == 'gpu'" },
-    { name = "stamp", extras = ["conch", "ctranspath", "uni", "virchow2", "chief-ctranspath", "conch1-5-cpu", "prism-cpu", "madeleine", "musk-cpu", "plip-cpu"], marker = "extra == 'cpu'" },
-    { name = "stamp", extras = ["conch", "ctranspath", "uni", "virchow2", "chief-ctranspath", "musk", "gigapath", "conch1-5", "prism", "madeleine", "plip", "cobra"], marker = "extra == 'gpu-all'" },
+    { name = "stamp", extras = ["conch", "ctranspath", "uni", "virchow2", "chief-ctranspath", "conch1-5-cpu", "prism", "madeleine", "plip", "musk-cpu", "cobra", "mira-seg"], marker = "extra == 'gpu'" },
+    { name = "stamp", extras = ["conch", "ctranspath", "uni", "virchow2", "chief-ctranspath", "conch1-5-cpu", "prism-cpu", "madeleine", "musk-cpu", "plip-cpu", "mira-seg"], marker = "extra == 'cpu'" },
+    { name = "stamp", extras = ["conch", "ctranspath", "uni", "virchow2", "chief-ctranspath", "musk", "gigapath", "conch1-5", "prism", "madeleine", "plip", "cobra", "mira-seg"], marker = "extra == 'gpu-all'" },
     { name = "stamp", extras = ["conch1-5-cpu"], marker = "extra == 'conch1-5'" },
     { name = "stamp", extras = ["cpu"], marker = "extra == 'all'" },
     { name = "stamp", extras = ["flash-attention"], marker = "sys_platform == 'linux' and extra == 'conch1-5'" },
@@ -4268,7 +4326,7 @@ requires-dist = [
     { name = "webdataset", marker = "sys_platform == 'linux' and extra == 'gigapath'", specifier = "==1.0.2" },
     { name = "xformers", marker = "(platform_machine == 'x86_64' and sys_platform == 'linux' and extra == 'musk') or (platform_machine == 'AMD64' and sys_platform == 'win32' and extra == 'musk')", specifier = "==0.0.35" },
 ]
-provides-extras = ["build", "flash-attention", "conch", "conch1-5-cpu", "conch1-5", "ctranspath", "chief-ctranspath", "gigapath", "uni", "virchow2", "cobra", "prism-cpu", "prism", "madeleine", "musk-cpu", "musk", "plip-cpu", "plip", "mcp", "cpu", "gpu", "gpu-all", "gpu-prebuilt", "all"]
+provides-extras = ["build", "flash-attention", "conch", "conch1-5-cpu", "conch1-5", "ctranspath", "chief-ctranspath", "gigapath", "uni", "virchow2", "cobra", "prism-cpu", "prism", "madeleine", "musk-cpu", "musk", "plip-cpu", "plip", "mira-seg", "mcp", "cpu", "gpu", "gpu-all", "gpu-prebuilt", "all"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -4488,17 +4546,17 @@ version = "2.11.0+cu130"
 source = { registry = "https://download.pytorch.org/whl/cu130" }
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
-    "python_full_version < '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
 ]
@@ -4626,17 +4684,17 @@ version = "0.26.0+cu130"
 source = { registry = "https://download.pytorch.org/whl/cu130" }
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
-    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
     "python_full_version >= '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
-    "python_full_version < '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
-    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version >= '3.14' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra == 'extra-5-stamp-gpu' and extra != 'extra-5-stamp-gpu-all' and extra != 'extra-5-stamp-gpu-prebuilt'",
+    "python_full_version < '3.14' and sys_platform == 'linux' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
+    "python_full_version < '3.14' and sys_platform == 'darwin' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version < '3.14' and sys_platform == 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
     "python_full_version < '3.14' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32' and extra != 'extra-5-stamp-cpu' and extra != 'extra-5-stamp-gpu'",
 ]

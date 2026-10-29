@@ -1,9 +1,34 @@
 import torch
 
+from stamp.modeling.models import Base
 from stamp.modeling.models.barspoon import EncDecTransformer
 from stamp.modeling.models.mlp import MLP
 from stamp.modeling.models.trans_mil import TransMIL
 from stamp.modeling.models.vision_tranformer import VisionTransformer
+
+
+class _SchedulerTestModel(Base):
+    def __init__(self, *, total_steps: int) -> None:
+        super().__init__(
+            total_steps=total_steps,
+            max_lr=1e-4,
+            div_factor=25.0,
+            train_patients=[],
+            valid_patients=[],
+        )
+        self.layer = torch.nn.Linear(2, 1)
+
+
+def test_one_cycle_scheduler_steps_per_training_batch() -> None:
+    total_steps = 40
+    model = _SchedulerTestModel(total_steps=total_steps)
+
+    optimizer_config = model.configure_optimizers()
+    scheduler_config = optimizer_config["lr_scheduler"]
+
+    assert scheduler_config["interval"] == "step"
+    assert scheduler_config["frequency"] == 1
+    assert scheduler_config["scheduler"].total_steps == total_steps
 
 
 def test_vision_transformer_dims(

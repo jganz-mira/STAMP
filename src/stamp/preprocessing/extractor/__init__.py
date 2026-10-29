@@ -26,3 +26,11 @@ class Extractor(Generic[ExtractorModel]):
     If possible, it should include the digest of the model weights etc.
     so that any change in the model also changes its ID.
     """
+    batch_size: int = 64
+    """Inference batch size used by the preprocessing pipeline."""
+    input_size_px: int | None = None
+    """Required square tile size, or ``None`` if the extractor accepts any size."""
+    input_mpp: float | None = None
+    """Required physical input resolution in microns per pixel, if constrained."""
+    autocast_dtype: torch.dtype | None = None
+    """Optional mixed-precision dtype used for the extractor forward pass."""

@@ -99,6 +99,15 @@ def _run_cli(args: argparse.Namespace) -> None:
                 canny_cutoff=config.preprocessing.canny_cutoff,
                 cache_tiles_ext=config.preprocessing.cache_tiles_ext,
                 generate_hash=config.preprocessing.generate_hash,
+                mira_seg_checkpoint_path=config.preprocessing.mira_seg_checkpoint_path,
+                vicreg_checkpoint_path=config.preprocessing.vicreg_checkpoint_path,
+                vicreg_batch_size=config.preprocessing.vicreg_batch_size,
+                mira_autoencoder_checkpoint_path=(
+                    config.preprocessing.mira_autoencoder_checkpoint_path
+                ),
+                mira_autoencoder_batch_size=(
+                    config.preprocessing.mira_autoencoder_batch_size
+                ),
             )
 
         case "encode_slides":

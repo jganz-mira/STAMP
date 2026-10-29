@@ -1,4 +1,5 @@
 import logging
+import math
 from collections.abc import Callable, Iterator
 from pathlib import Path
 from tempfile import NamedTemporaryFile
@@ -123,6 +124,11 @@ def extract_(
     brightness_cutoff: int | None,
     canny_cutoff: float | None,
     generate_hash: bool,
+    mira_seg_checkpoint_path: Path | None = None,
+    vicreg_checkpoint_path: Path | None = None,
+    vicreg_batch_size: int | None = None,
+    mira_autoencoder_checkpoint_path: Path | None = None,
+    mira_autoencoder_batch_size: int | None = None,
 ) -> None:
     """
     Extracts features from slides.
@@ -170,10 +176,51 @@ def extract_(
 
             extractor = dino_bloom()
 
+        case ExtractorName.OPENMIDNIGHT:
+            from stamp.preprocessing.extractor.openmidnight import openmidnight
+
+            extractor = openmidnight()
+
         case ExtractorName.RED_DINO:
             from stamp.preprocessing.extractor.reddino import red_dino
 
             extractor = red_dino()
+
+        case ExtractorName.MIRA_SEG:
+            from stamp.preprocessing.extractor.mira_seg import mira_seg
+
+            extractor = mira_seg(checkpoint_path=mira_seg_checkpoint_path)
+
+        case ExtractorName.MIRA_IMAGENET:
+            from stamp.preprocessing.extractor.mira_seg import mira_imagenet
+
+            extractor = mira_imagenet()
+
+        case ExtractorName.VICREG:
+            from stamp.preprocessing.extractor.vicreg import vicreg
+
+            if vicreg_checkpoint_path is None:
+                raise ValueError("vicreg_checkpoint_path is required for VICReg")
+            extractor = vicreg(
+                checkpoint_path=vicreg_checkpoint_path,
+                batch_size=vicreg_batch_size,
+            )
+
+        case ExtractorName.MIRA_AUTOENCODER:
+            from stamp.preprocessing.extractor.mira_autoencoder import (
+                mira_autoencoder,
+            )
+
+            if mira_autoencoder_checkpoint_path is None:
+                raise ValueError(
+                    "mira_autoencoder_checkpoint_path is required for the "
+                    "MIRA autoencoder"
+                )
+            extractor = mira_autoencoder(
+                checkpoint_path=mira_autoencoder_checkpoint_path,
+                input_mpp=float(tile_size_um) / int(tile_size_px),
+                batch_size=mira_autoencoder_batch_size,
+            )
 
         case ExtractorName.VIRCHOW:
             from stamp.preprocessing.extractor.virchow import virchow
@@ -239,6 +286,25 @@ def extract_(
 
         case _ as unreachable:
             assert_never(unreachable)
+
+    if (
+        extractor.input_size_px is not None
+        and int(tile_size_px) != extractor.input_size_px
+    ):
+        raise ValueError(
+            f"Extractor {extractor.identifier} requires tile_size_px="
+            f"{extractor.input_size_px}, got {tile_size_px}. The WSI tiles must be "
+            "read at the model's native input size instead of resized afterwards."
+        )
+    if extractor.input_mpp is not None:
+        configured_mpp = float(tile_size_um) / int(tile_size_px)
+        if not math.isclose(configured_mpp, extractor.input_mpp, abs_tol=1e-6):
+            raise ValueError(
+                f"Extractor {extractor.identifier} requires "
+                f"{extractor.input_mpp:g} microns per pixel, got "
+                f"{configured_mpp:g} from tile_size_um={tile_size_um} and "
+                f"tile_size_px={tile_size_px}."
+            )
 
     model = extractor.model.to(device).eval()
 
@@ -314,15 +380,23 @@ def extract_(
             # num_workers=1 is intentional: WSI read parallelism is inside _supertiles.
             dl = DataLoader(
                 ds,
-                batch_size=64,
+                batch_size=extractor.batch_size,
                 num_workers=1,
                 drop_last=False,
             )
 
             feats, xs_um, ys_um = [], [], []
             for tiles, xs, ys in tqdm(dl, leave=False):
-                with torch.inference_mode():
-                    feats.append(model(tiles.to(device)).detach().half().cpu())
+                tiles = tiles.to(device)
+                with (
+                    torch.inference_mode(),
+                    torch.autocast(
+                        device_type=tiles.device.type,
+                        dtype=extractor.autocast_dtype,
+                        enabled=extractor.autocast_dtype is not None,
+                    ),
+                ):
+                    feats.append(model(tiles).detach().half().cpu())
                 xs_um.append(xs.float())
                 ys_um.append(ys.float())
         except MPPExtractionError:

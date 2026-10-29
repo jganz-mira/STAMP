@@ -3,6 +3,14 @@ Dockerfile
 /config.yaml
 *.bin
 
+checkpoint/
+figures/
+.aws/
+.codex/
+.agents/
+.ruff_cache/
+.vscode/
+.github/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
